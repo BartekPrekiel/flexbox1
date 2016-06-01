@@ -1,0 +1,113 @@
+body {
+	font-family: sans-serif;
+	margin: 0 auto;
+}
+
+header {
+	background-color: cadetblue;
+	color: #fff;
+	background-image: url("wz-bg.jpg");
+
+}
+
+header h1{
+	margin: 0;
+	padding: 1rem;
+}
+
+aside {
+	padding: 1em;
+	background-color: orange;
+	background-image: url("wz-side.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+article {
+	padding: 1em;
+}
+
+footer {
+	padding: 1em;
+	background-color: #444;
+	color: white;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+aside {
+	order: 1;
+}
+
+/* Layout flexbox */
+
+footer:after {
+	content: ' Dit is voor mobiel';
+}
+
+/* vanaf 26 em */
+
+
+
+
+
+@media screen and (min-width: 26em){
+	main {
+		 flex-direction: row;
+		 flex-wrap: wrap;
+	}
+
+	article {
+		width: 100%;
+	}
+
+	aside {
+	flex: 1;
+	background-color: black;
+		}
+
+	footer:after {
+		content: 'Dit is voor apparaten tussen 26 en 36 em';
+	}
+}
+
+
+/* VANAF 36 EM */
+
+
+@media screen and (min-width: 36em){
+	main{
+		flex-wrap: nowrap;
+	}
+	
+	article{
+		width: auto;
+		flex: 2;
+	}
+
+	aside{
+		order: 0;
+	}
+
+	footer:after {
+		content: 'Dit is voor apparaten groter dan 36 em';
+	}
+}
+
+aside p{
+	font-size: 33px;
+}
+
+aside input{
+	width: 200px;
+}
+
+aside div {
+width: 50%;
+margin: 0 auto;
+	background-color: grey;
+	padding: 20px;
+}
